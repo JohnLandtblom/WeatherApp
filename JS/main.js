@@ -30,7 +30,7 @@ async function fetchWeatherData(woeId) {
         let data = await response.json();
 
       if(dateSpecificWeather) {
-            headLineText.innerHTML += `<h1>The Weather In ${userInputLocation.value} On The ${dateInput.value} was:</h1>`;
+            headLineText.innerHTML = `<h1>The Weather In ${userInputLocation.value} On The ${dateInput.value} was:</h1>`;
             for (let i = 0; i < data.length; i++) {
                 let weather = data[i];
                 let weatherIcon = weather.weather_state_abbr;
@@ -50,7 +50,7 @@ async function fetchWeatherData(woeId) {
         } else {    
             let weatherColl = data.consolidated_weather;
             console.log(data);
-            headLineText.innerHTML += `<h1>The Weather In ${data.title}</h1>`;
+            headLineText.innerHTML = `<h1>The Weather In ${data.title}</h1>`;
         for (let i= 0; i < weatherColl.length; i++) {
             let weather = weatherColl[i];
             let weatherIcon = weather.weather_state_abbr;
