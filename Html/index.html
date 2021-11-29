@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>WeatherApp</title>
+</head>
+<body>
+    <div class="contentBorder">
+        <div class="inputContainer">
+            <h1>Whats The Weather Like?</h1>
+            <form action="">
+                <input type="text" class="textInputStyle" id="userInput" placeholder="Type Location...">
+                <input type="date" class="dateInputStyle" id="date" min="2013-01-01">
+                <button id="submitBtn">GO!</button>
+            </form>
+        </div>
+    
+        <div class="contentContainer" id="contentDisplay"> 
+            <div id="headLine"></div>
+            <div class="weatherDataStyle" id="weatherData"></div>
+        </div>
+    </div>
+
+    <script src="/JS/main.js"></script>
+</body>
+</html>
