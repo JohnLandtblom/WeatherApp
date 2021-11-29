@@ -2,6 +2,7 @@ let userInputLocation  = document.getElementById('userInput');
 let dateInput          = document.getElementById('date');
 let headLineText       = document.getElementById('headLine');
 let btn                = document.getElementById('submitBtn');
+let btnRemove          = document.getElementById('removeBtn');
 let result             = document.getElementById('weatherData');
 let displayContent     = document.getElementById('contentDisplay');
 
@@ -9,6 +10,10 @@ btn.addEventListener('click', function(e) {
     e.preventDefault();
     fetchWoeId();
     displayContent.style ="";
+})
+
+btnRemove.addEventListener('click', function() {
+    displayContent.remove();
 })
 
 async function fetchWeatherData(woeId) {

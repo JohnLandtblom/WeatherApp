@@ -1,7 +1,11 @@
-.contentBorder {
+.bgColor {
+    background-color: rgb(228, 221, 208);
+}
+
+/*.contentBorder {
     border: 5px solid rgb(3, 161, 24);
     border-radius: 10px;
-}
+}*/
 
 .inputContainer {
     background-color: rgb(4, 140, 158);
@@ -71,6 +75,18 @@ li {
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 30px;
+}
+
+.removeBtnStyle {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 60%;
+}
+
+.removeBtnStyle:hover {
+    opacity: 100%;
 }
 
 h1 {
