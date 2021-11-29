@@ -63,6 +63,7 @@ li {
     height: auto;
     border: 3px solid #333;
     border-radius: 10px;
+    opacity: 90%;
 }
 
 .weatherDataStyle {
@@ -73,10 +74,27 @@ li {
 }
 
 h1 {
-  color: rgb(4, 140, 158);
+  color: rgb(70, 188, 204);
   margin-left: 40px;
   font-size: 40px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: underline;
 }
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+
 
