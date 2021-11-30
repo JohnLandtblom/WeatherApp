@@ -12,10 +12,6 @@ btn.addEventListener('click', function(e) {
     displayContent.style ="";
 })
 
-btnRemove.addEventListener('click', function() {
-    displayContent.remove();
-})
-
 async function fetchWeatherData(woeId) {
     result.innerHTML = '';
     let dateSpecificWeather = false;

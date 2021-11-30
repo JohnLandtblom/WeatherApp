@@ -2,11 +2,6 @@
     background-color: rgb(228, 221, 208);
 }
 
-/*.contentBorder {
-    border: 5px solid rgb(3, 161, 24);
-    border-radius: 10px;
-}*/
-
 .inputContainer {
     background-color: rgb(4, 140, 158);
     overflow: hidden;
@@ -77,14 +72,6 @@ li {
     margin-bottom: 30px;
 }
 
-.removeBtnStyle {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    opacity: 60%;
-}
-
 .removeBtnStyle:hover {
     opacity: 100%;
 }
@@ -110,6 +97,45 @@ p {
 a {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
+}
+
+@media screen and (max-width: 970px) {
+    .inputContainer {
+        height: auto;
+    }
+    
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form .textInputStyle {
+        margin-left: 24%;
+        margin-right: 24%;
+        width: auto;
+    }
+
+    form .dateInputStyle {
+        width: auto;
+        margin-left: 43%;
+        margin-right: 43%;
+        margin-top: 10px;
+    }
+
+    form button {
+        margin-left: 43%;
+        margin-right: 43%;
+    }
+
+    .weatherDataStyle {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
