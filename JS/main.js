@@ -6,12 +6,14 @@ let btnRemove          = document.getElementById('removeBtn');
 let result             = document.getElementById('weatherData');
 let displayContent     = document.getElementById('contentDisplay');
 
+// Submit Button
 btn.addEventListener('click', function(e) {
     e.preventDefault();
     fetchWoeId();
     displayContent.style ="";
 })
 
+// Gets weatherdata with or without specific dates 
 async function fetchWeatherData(woeId) {
     result.innerHTML = '';
     let dateSpecificWeather = false;
@@ -19,17 +21,18 @@ async function fetchWeatherData(woeId) {
     let getUrl = 'https://www.metaweather.com/api/location/' + woeId;
     if(dateValue && dateValue.length > 0)
     {
-        dateSpecificWeather = true;
+        dateSpecificWeather = true; 
         getUrl += "/" + dateValue.replaceAll('-', '/');
     }
     try {
-        let response = await fetch(getUrl);
+        let response = await fetch(getUrl); // Gets selected date from user 
        
         if (!response.ok) {
             throw new Error(`<h2>Something went wrong.. ${error}</h2>`);
         }
         let data = await response.json();
 
+      // Option if user wants to search by date  
       if(dateSpecificWeather) {
             headLineText.innerHTML = `<h1>The Weather In ${userInputLocation.value} On The ${dateInput.value} was:</h1>`;
             for (let i = 0; i < data.length; i++) {
@@ -47,7 +50,8 @@ async function fetchWeatherData(woeId) {
                 </li>
                 `;
             }
-            
+           
+          // If user doesn´t choose specific date, data appears for 6 days  
         } else {    
             let weatherColl = data.consolidated_weather;
             console.log(data);
@@ -73,7 +77,7 @@ async function fetchWeatherData(woeId) {
         result.innerHTML = `<h2>OOOPS! Something went wrong. "${error}"</h2>`;
     }
 }
-
+// Gets WOEID, "Where On Earth ID" to find the location
 async function fetchWoeId() {
     try {
         let response = await fetch('https://www.metaweather.com/api/location/search/?query=' + userInputLocation.value);
